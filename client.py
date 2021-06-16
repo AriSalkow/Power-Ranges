@@ -11,7 +11,7 @@ def check_responses():
     response_preds = []
     payload = {'meter_id':200713,
                'csv_url':'https://raw.githubusercontent.com/Jamie-B22/ITC_final_project/3c6ca44c2db3c56c8de12f46f80a2c5f66baadb6/CP4/200713_weather_feats.csv'}
-    response_preds.append(requests.get('http://127.0.0.1:5000/', params=payload).text)
+    response_preds.append(requests.get('https://power-ranges.herokuapp.com/api_predict', params=payload).text)
     print(response_preds)
 
 

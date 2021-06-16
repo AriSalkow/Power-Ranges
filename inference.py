@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 
-@app.route('/')
+@app.route('/api_predict')
 def predict_api():
     meter_id = request.args.get('meter_id') #200713
     csv_url = request.args.get('csv_url')
