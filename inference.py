@@ -13,12 +13,12 @@ app = Flask(__name__)
 
 @app.route('/api_predict')
 def predict_api():
-    meter_id = request.args.get('meter_id') #200713
-    csv_url = request.args.get('csv_url')
-    weather_data_df = pd.read_csv(csv_url, index_col='captured_on_h', parse_dates=True)#str(meter_id) + '_weather_feats.csv', index_col='captured_on_h', parse_dates=True)
-    timestamps, preds = predict_fn(meter_id, weather_data_df)
-    print(timestamps, preds)
-    output = jsonify(timestamps=timestamps, consumption=preds)
+    # meter_id = request.args.get('meter_id') #200713
+    # csv_url = request.args.get('csv_url')
+    # weather_data_df = pd.read_csv(csv_url, index_col='captured_on_h', parse_dates=True)#str(meter_id) + '_weather_feats.csv', index_col='captured_on_h', parse_dates=True)
+    # timestamps, preds = predict_fn(meter_id, weather_data_df)
+    # print(timestamps, preds)
+    # output = jsonify(timestamps=timestamps, consumption=preds)
     res = 'Hello Ruslan'
     return res
 
