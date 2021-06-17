@@ -19,7 +19,8 @@ def predict_api():
     timestamps, preds = predict_fn(meter_id, weather_data_df)
     print(timestamps, preds)
     output = jsonify(timestamps=timestamps, consumption=preds)
-    return output
+    res = 'Hello Ruslan'
+    return res
 
 
 
